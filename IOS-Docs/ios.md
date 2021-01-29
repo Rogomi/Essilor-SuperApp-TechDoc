@@ -78,7 +78,7 @@ Communications
   - `clearTabs()`
   - `gotToLanding()`
 
-- **AuthViewController** - contains functions that allows the user to sign in via their Google account.  
+- **AuthViewController** - contains functions that allows the user to sign in via their Google account. Handles offline error and checking user credentials  
   - `ssign(... didSignInFor user: GIDGoogleUser!)`
   - `showOfflineAlert()`
   - `validDomain()`
