@@ -94,3 +94,18 @@ Communications
 
 
 ### APPLICATION FLOW DIAGRAM
+
+
+
+- **SignUpViewController** - contains functions that handles user’s registration. It contains the form fields where the user can fill their information up.  
+  ##### Methods
+  - `signUp()`
+  - `validate()`
+  - `getEmptyMessage()`
+  - `getEmptyError()`
+  - `showTNCVC(withTitle title: String, content: String)()`
+  - `refreshSelectionFields()`
+  - `refreshEyecons()`
+  - `addTapGestureToSelectionFields()`
+  - `textFieldShouldBeginEditing()`
+  - `textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)`
