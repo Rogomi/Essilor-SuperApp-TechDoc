@@ -71,41 +71,30 @@ Communications
 #### Core Classes
 
 #### View Controllers
-   
-- **AppTabBarController** - manages the app access, redirects to Login screen when user is not logged in  
+
+- **AppTabBarController** - manages the app access, redirects to Login screen when user is not logged in.    
   ##### Methods
-  - openLogin()
-  - gotToLanding()
-  - clearTabs()  
-- **AuthViewController** - contains functions that allows the user to sign in via their Google account    
+  - `openLogin()`
+  - `clearTabs()`
+  - `gotToLanding()`
+
+- **AuthViewController** - contains functions that allows the user to sign in via their Google account.  
+  - `ssign(... didSignInFor user: GIDGoogleUser!)`
+  - `showOfflineAlert()`
+  - `validDomain()`
+  - `showInvalidEmailAlert()`
+
+- **CalendarViewController** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date  
   ##### Methods
-  - sign(... didSignInFor user: GIDGoogleUser!) 
-  - showOfflineAlert()
-  - validDomain()
-  - showInvalidEmailAlert()  
-- **Calendar View Controller** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date  
-  ##### Methods
-  - tableView(... cellForRowAt indexPath: IndexPath)
-  - tableView(... didSelectRowAt indexPath: IndexPath)
-  - configureCalendar(...)
-  - calendar(... cellForItemAt date: Date,...)
-  - getList(date: Date)   - getEventsByDate(date: Date)  
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `configureCalendar(...)`
+  - `calendar(... cellForItemAt date: Date,...)`
+  - `getList(date: Date)`
+  - `getEventsByDate(date: Date)()`
+
 - **PodcastDashboardViewController** - controlls the podcast view 
 
 
 ### APPLICATION FLOW DIAGRAM
 
-
-
-- **SignUpViewController** - contains functions that handles user’s registration. It contains the form fields where the user can fill their information up.  
-  ##### Methods
-  - `signUp()`
-  - `validate()`
-  - `getEmptyMessage()`
-  - `getEmptyError()`
-  - `showTNCVC(withTitle title: String, content: String)()`
-  - `refreshSelectionFields()`
-  - `refreshEyecons()`
-  - `addTapGestureToSelectionFields()`
-  - `textFieldShouldBeginEditing()`
-  - `textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)`
