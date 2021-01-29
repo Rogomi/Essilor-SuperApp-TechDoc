@@ -73,24 +73,23 @@ Communications
 #### View Controllers
    
 - **AppTabBarController** - manages the app access, redirects to Login screen when user is not logged in  
-    ##### Methods
-    - openLogin()
-    - gotToLanding()
-    - clearTabs()  
+  ##### Methods
+  - openLogin()
+  - gotToLanding()
+  - clearTabs()  
 - **AuthViewController** - contains functions that allows the user to sign in via their Google account    
-    ##### Methods
-    - sign(... didSignInFor user: GIDGoogleUser!) 
-    - showOfflineAlert()
-    - validDomain()
-    - showInvalidEmailAlert()  
+  ##### Methods
+  - sign(... didSignInFor user: GIDGoogleUser!) 
+  - showOfflineAlert()
+  - validDomain()
+  - showInvalidEmailAlert()  
 - **Calendar View Controller** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date  
-    ##### Methods
-    - tableView(... cellForRowAt indexPath: IndexPath)
-    - tableView(... didSelectRowAt indexPath: IndexPath)
-    - configureCalendar(...)
-    - calendar(... cellForItemAt date: Date,...)
-    - getList(date: Date)
-    - getEventsByDate(date: Date)  
+  ##### Methods
+  - tableView(... cellForRowAt indexPath: IndexPath)
+  - tableView(... didSelectRowAt indexPath: IndexPath)
+  - configureCalendar(...)
+  - calendar(... cellForItemAt date: Date,...)
+  - getList(date: Date)   - getEventsByDate(date: Date)  
 - **PodcastDashboardViewController** - controlls the podcast view 
 
 
