@@ -1,6 +1,6 @@
 [Back](../index.md)
 
-# MyTransitions Android
+# My Transitions Android
 
 ## Technical Documentation
 
@@ -14,11 +14,11 @@ In order to start the development, first, you need to start Android Studio. Impo
 
 ### PROGRAMMING LANGUAGE
 
-MyTransitions uses Kotlin for development
+My Transitions uses Kotlin for development
 
 ### MINIMUM VERSION
 
-MyTransitions can run on Android Systems with minimum SDK version 26. It may encounter multiple issues on lower SDK versions.
+My Transitions can run on Android Systems with minimum SDK version 26. It may encounter multiple issues on lower SDK versions.
 
 ### APPLICATION ID
 
