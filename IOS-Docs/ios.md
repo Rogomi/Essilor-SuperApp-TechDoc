@@ -72,18 +72,18 @@ Communications
 
 #### View Controllers
    
-- **AppTabBarController** - manages the app access, redirects to Login screen when user is not logged in
+- **AppTabBarController** - manages the app access, redirects to Login screen when user is not logged in  
     ##### Methods
     - openLogin()
     - gotToLanding()
     - clearTabs()  
-- **AuthViewController** - contains functions that allows the user to sign in via their Google account  
+- **AuthViewController** - contains functions that allows the user to sign in via their Google account    
     ##### Methods
     - sign(... didSignInFor user: GIDGoogleUser!) 
     - showOfflineAlert()
     - validDomain()
     - showInvalidEmailAlert()  
-- **Calendar View Controller** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date
+- **Calendar View Controller** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date  
     ##### Methods
     - tableView(... cellForRowAt indexPath: IndexPath)
     - tableView(... didSelectRowAt indexPath: IndexPath)
