@@ -86,6 +86,30 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `validDomain()`
   - `showInvalidEmailAlert()`
 
+- **UserSocialProfileViewController** - contains functions that displays a specific user's profile information and timeline for activities, groups and comments.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapOverflowButton(_ sender: Any)`
+  - `numberOfSections(in tableView: UITableView)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+
+- **LikesViewController** - contains functions that displays list of users that liked a social item (Posts, Comments, Podcast, etc.)
+  ##### Methods
+  - `didTapCloseButton(_ sender: Any)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+
+- **CommentsViewController** - contains functions that displays list of comments and their specific replies.
+  ##### Methods
+  - `didTapCloseButton(_ sender: Any)`
+  - `numberOfSections(in tableView: UITableView)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+
 - **CalendarViewController** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date  
   ##### Methods
   - `tableView(... cellForRowAt indexPath: IndexPath)`
