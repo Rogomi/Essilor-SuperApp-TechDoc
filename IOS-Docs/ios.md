@@ -43,9 +43,8 @@ Google Sign In API, Azure
 Most of the third party libraries are installed using CocoaPods. They can be added by searching library names found in https://cocoapods.org/, inserting them in the Podfile and running the pod install command in the Terminal.
 
 #### Important Libraries
-**Alamofire** - For Web API 
-Communications
-**SwiftyJSON** - To ease up processing of response data  
+**Alamofire** - For Web API Communications
+**SwiftyJSON** - To ease up processing of response data
 **ObjectMapper** - To easily create models for response data
 
 #### Firebase Platform Libraries.
@@ -64,7 +63,9 @@ Communications
 **SwiftDate** - Used to easily process Date objects in swift   
 **Fakery** - To easily create dummy data.   
 **GoogleSignIn** - Used to sign in to Google
-
+**GoogleAPIClientForREST/Calendar** -  To connect to Google Calendar
+**SwiftAudio** - Used to play podcasts
+**SkeletonView** Used to display a loading view for incoming data
 
 ### ACTIVITIES AND CONTROLLERS
 
@@ -93,8 +94,53 @@ Communications
   - `getList(date: Date)`
   - `getEventsByDate(date: Date)()`
 
-- **PodcastDashboardViewController** - controlls the podcast view 
+- **PodcastDashboardViewController** - controls the podcast dashboard
+  - `getPodcastCategories(only: Bool)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `tableView(... estimatedHeightForRowAt indexPath: IndexPath)`
+  - `numSections(in collectionSkeletonView: UITableView)`
+  - `collectionSkeletonView(... numberOfRowsInSection section: Int)`
+  - `collectionSkeletonView(... didSelectRowAt indexPath: IndexPath)`
 
+- **PodcastSearchViewController** - contains functions that allows the user to search through podcasts
+  - `getPodcasts()`
+  - `getFilteredPodcast()`
+  - `didTapCancelButton(_ sender: Any)`
+  - `editingChanged(_ sender: UITextField)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+
+- **PodcastPlayerViewController** - contains functions that allows the user to play podcasts
+  - `didTapOverflowButton(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapLikes(_ sender: Any)`
+  - `didTapComments(_ sender: Any)`
+  - `togglePlay(_ sender: Any)`
+  - `previous(_ sender: Any)`
+  - `next(_ sender: Any)`
+  - `startScrubbing(_ sender: UISlider)`
+  - `scrubbing(_ sender: UISlider)`
+  - `scrubbingValueChanged(_ sender: UISlider)`
+  - `updateTimeValues()`
+  - `updateMetaData()`
+  - `setPlayButtonState(forAudioPlayerState state: AudioPlayerState) `
+  - `handleAudioPlayerStateChange(data: AudioPlayer.StateChangeEventData)`
+  - `handlePlayerFailure(data: AudioPlayer.FailEventData)`
+
+- **PodcastCategoryViewController** - contains functions that allows the user to view podcasts in a category
+  - `didTapCloseButton(_ sender: Any)`
+  - `getFilteredPodcast()`
+  - `didTapCancelButton(_ sender: Any)`
+  - `editingChanged(_ sender: UITextField)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  
+  - **PodcastDetailsViewController** - controls the display of podcast information details
+  - `didTapCloseButton()`
 
 ### APPLICATION FLOW DIAGRAM
 
