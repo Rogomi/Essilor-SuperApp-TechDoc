@@ -142,9 +142,8 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `editingChanged(_ sender: UITextField)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
-  - `tableView(... didSelectRowAt indexPath: IndexPath)`
-
-
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+  
  - **PodcastDetailsViewController** - controls the display of podcast information details  
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
