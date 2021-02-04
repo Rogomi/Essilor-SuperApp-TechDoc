@@ -44,6 +44,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 
 #### Important Libraries
 **Alamofire** - For Web API Communications
+
 **SwiftyJSON** - To ease up processing of response data
 **ObjectMapper** - To easily create models for response data
 
@@ -143,6 +144,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
+
 
   - **PodcastDetailsViewController** - controls the display of podcast information details
   ##### Methods
