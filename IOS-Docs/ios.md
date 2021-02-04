@@ -40,25 +40,30 @@ Google Sign In API, Azure
 
 
 ### THIRD PARTY LIBRARIES
+#### Linked Libraries
+**AdSupport.framework** - Used for Google Analytics  
+**AppTrackingTransparency.framework** - Required by apple for iOS 14 and above to allow the user to decide whether they let the app have access to IDFA or not.
+
+#### Cocoapods
 Most of the third party libraries are installed using CocoaPods. They can be added by searching library names found in https://cocoapods.org/, inserting them in the Podfile and running the pod install command in the Terminal.
 
-#### Important Libraries
+##### Important Libraries
 **Alamofire** - For Web API Communications  
 **SwiftyJSON** - To ease up processing of response data  
 **ObjectMapper** - To easily create models for response data
 
-#### Firebase Platform Libraries.
+##### Firebase Platform Libraries.
 **Firebase/Analytics** - Used for App Analytics  
 **Firebase/Crashlytics** - Used to identify causes of crashes from users
 
-#### UI Libraries
+##### UI Libraries
 **IQKeyboardManagerSwift** - To automatically scroll up the UITextView on screen when the keyboard is up.  
 **IBAnimatable** - To easily add special UI Designs on specific views, and see them reflected on the Interface Builder. Also has methods to animate views.  
 **SDWebImage** - To easily load Images from URL and has caching functions.  
 **MBProgressHUD** - Used to add heads up display on screen to indicate loading while user is waiting for data to be loaded from the API  
 **JTAppleCalendar** - Used for the Calendar module
-
-#### Other Useful Libraries 
+**FlagKit** - Used for profile country
+##### Other Useful Libraries 
 **ReachabilitySwift** - Used to check internet connection status   
 **SwiftDate** - Used to easily process Date objects in swift   
 **Fakery** - To easily create dummy data.   
