@@ -43,8 +43,8 @@ Google Sign In API, Azure
 Most of the third party libraries are installed using CocoaPods. They can be added by searching library names found in https://cocoapods.org/, inserting them in the Podfile and running the pod install command in the Terminal.
 
 #### Important Libraries
-**Alamofire** - For Web API Communications
-**SwiftyJSON** - To ease up processing of response data
+**Alamofire** - For Web API Communications  
+**SwiftyJSON** - To ease up processing of response data  
 **ObjectMapper** - To easily create models for response data
 
 #### Firebase Platform Libraries.
@@ -145,7 +145,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
 
 
- - **PodcastDetailsViewController** - controls the display of podcast information details
+ - **PodcastDetailsViewController** - controls the display of podcast information details  
  ##### Methods
  - `didTapCloseButton()`
 
