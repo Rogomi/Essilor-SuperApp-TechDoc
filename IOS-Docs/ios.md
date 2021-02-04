@@ -144,9 +144,9 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
   
- - **PodcastDetailsViewController** - controls the display of podcast information details  
+- **PodcastDetailsViewController** - controls the display of podcast information details  
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
-
+  
 ### APPLICATION FLOW DIAGRAM
 
