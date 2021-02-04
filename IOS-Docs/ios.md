@@ -80,6 +80,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `gotToLanding()`
 
 - **AuthViewController** - contains functions that allows the user to sign in via their Google account. Handles offline error and checking user credentials  
+  ##### Methods
   - `ssign(... didSignInFor user: GIDGoogleUser!)`
   - `showOfflineAlert()`
   - `validDomain()`
@@ -95,6 +96,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `getEventsByDate(date: Date)()`
 
 - **PodcastDashboardViewController** - controls the podcast dashboard
+  ##### Methods
   - `getPodcastCategories(only: Bool)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
@@ -105,6 +107,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `collectionSkeletonView(... didSelectRowAt indexPath: IndexPath)`
 
 - **PodcastSearchViewController** - contains functions that allows the user to search through podcasts
+  ##### Methods
   - `getPodcasts()`
   - `getFilteredPodcast()`
   - `didTapCancelButton(_ sender: Any)`
@@ -114,6 +117,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
 
 - **PodcastPlayerViewController** - contains functions that allows the user to play podcasts
+  ##### Methods
   - `didTapOverflowButton(_ sender: Any)`
   - `didTapCloseButton(_ sender: Any)`
   - `didTapLikes(_ sender: Any)`
@@ -131,6 +135,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `handlePlayerFailure(data: AudioPlayer.FailEventData)`
 
 - **PodcastCategoryViewController** - contains functions that allows the user to view podcasts in a category
+  ##### Methods
   - `didTapCloseButton(_ sender: Any)`
   - `getFilteredPodcast()`
   - `didTapCancelButton(_ sender: Any)`
@@ -138,8 +143,9 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
-  
+
   - **PodcastDetailsViewController** - controls the display of podcast information details
+  ##### Methods
   - `didTapCloseButton()`
 
 ### APPLICATION FLOW DIAGRAM
