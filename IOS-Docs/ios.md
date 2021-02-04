@@ -75,7 +75,13 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 ### ACTIVITIES AND CONTROLLERS
 
 #### Core Classes
-
+- **AppDelegate** - manages most of the pre-startup items like Firebase configurations, etc.
+  ##### Configured items
+  - Firebase Configuration - Analytics and crashlytics.
+  - IDFA Permission - Asks the user for permission to track for analytics.
+  - Google Sign In - Sets the API key for Google Sign In
+  - IQKeyboardManager - enables the global usage of IQKeyboardManager.
+  - Web Configuration - sets the globally used domain for API access.
 #### View Controllers
 
 - **AppTabBarController** - manages the app access, redirects to Login screen when user is not logged in.    
