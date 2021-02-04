@@ -146,8 +146,8 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 
 
  - **PodcastDetailsViewController** - controls the display of podcast information details
-  ##### Methods
-  - `didTapCloseButton()`
+ ##### Methods
+ - `didTapCloseButton()`
 
 ### APPLICATION FLOW DIAGRAM
 
