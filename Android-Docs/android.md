@@ -64,10 +64,21 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   
 - **PodcastsFragment** - handles the list of podcast by category
   ##### Methods
+  - `initPodcasts()` - display the list of podcasts to the server
+  - `onPadcastSelected()` - opens the PodcastPlayerFragment
+  
+- **PodcastsSearchFragment** - handles the list of podcast by category
+  ##### Methods
+  - `initPodcasts()` - display the list of podcasts to the server
+  - `onSearch(keyword: String)` - handles the filter based on user's input
+  - `onPadcastSelected()` - opens the PodcastPlayerFragment
+
+- **PodcastsViewAllFragment** - handles the list of all podcast from the selected category
+  ##### Methods
   - `initPodcasts()` - calls the list of podcasts to the server
   - `onPadcastSelected()` - opens the PodcastPlayerFragment
   - `onGetPodcastsPercategory()` - render the list of podcast returned from the server
-  
+
 - **PodcastPlayerFragment** - handles the podcast player
   ##### Methods
   - `runService()` - initialize the service that controls the player from the background
@@ -82,9 +93,9 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initAdapter()` - binds the filtered events to the UI
   
   
-### DIAGRAM
+### TECHNICAL ARCHITECTURE
 
-//Todo:
+https://docs.google.com/presentation/d/1zwyqjWj-pD5GhJBKlKkLHscQwNlRJe6SFR_hmEWbIPk/edit?usp=sharing
 
 #### **Model**
 
