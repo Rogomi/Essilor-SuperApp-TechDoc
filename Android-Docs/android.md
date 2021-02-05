@@ -57,13 +57,31 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initActions()` - initialize the Google sign in button
   - `onLoginSuccess(account: GoogleSignInAccount)` - called when the Google sign in is successful
   - `goToMain()` - redirects the application to the MainActivity
+  
+- **MainActivity** - container of fragments and controls the main bottom navigation
+  ##### Methods
+  - `initNavigation()` - initialize bottom navigations
+  
+- **PodcastsFragment** - handles the list of podcast by category
+  ##### Methods
+  - `initPodcasts()` - calls the list of podcasts to the server
+  - `onPadcastSelected()` - opens the PodcastPlayerFragment
+  - `onGetPodcastsPercategory()` - render the list of podcast returned from the server
+  
+ - **PodcastPlayerFragment** - handles the podcast player
+  ##### Methods
+  - `runService()` - initialize the service that controls the player from the background
+  - `updatePlayerButton()` - update the player buttons
+  - `updatePosition()` - update the time of playing audio in the seekbar
+  
 - **CalendarFragment** - handles the calendar page
   #### Methods
   - `onEventsSuccess(eventHolder: EventHolder)` - called when the fetching of the events from the API is successful
   - `initCalendar()` - initializes the calendar's UI and data binding
   - `filterEvents(): ArrayList<EventHolder.Companion.Event>` -returns the filtered events from the Google Calendar API by the current selected date
   - `initAdapter()` - binds the filtered events to the UI
-
+  
+  
 ### DIAGRAM
 
 //Todo:
