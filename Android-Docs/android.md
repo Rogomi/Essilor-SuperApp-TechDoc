@@ -68,7 +68,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onPadcastSelected()` - opens the PodcastPlayerFragment
   - `onGetPodcastsPercategory()` - render the list of podcast returned from the server
   
- - **PodcastPlayerFragment** - handles the podcast player
+- **PodcastPlayerFragment** - handles the podcast player
   ##### Methods
   - `runService()` - initialize the service that controls the player from the background
   - `updatePlayerButton()` - update the player buttons
