@@ -97,6 +97,44 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `validDomain()`
   - `showInvalidEmailAlert()`
 
+- **SocialViewController** - contains functions that manages different Social pages (e.g., Feed, Events, Community).
+  ##### Methods
+  - `collectionView(... numberOfItemsInSection section: Int)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`
+
+- **FeedViewController** - contains functions that loads the newsfeed for the user (contains 3 sections, the User Stories, TW Highlights and Activities)
+  ##### Methods
+  - `loadTWH()`
+  - `numberOfSections(in tableView: UITableView)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... viewForHeaderInSection section: Int)`
+
+- **TWHighlightsSeeAllViewController** - contains functions that loads all of the TW Highlights from the API and displays to the user.
+  ##### Methods
+  - `loadTWH(pageCursor: String, willShowSkeleton: Bool)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `tableView(... viewForHeaderInSection section: Int)`
+
+- **TWHighlightDetailsViewController** - contains functions that loads a TW Highlight content and loads a brief list of news from the API.
+  ##### Methods
+  - `loadNews()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapOverflowButton(_ sender: Any)`
+  - `didTapLikesButton(_ sender: Any)`
+  - `didTapLikeButton(_ sender: Any)`
+  - `didTapCommentsButton(_ sender: Any)`
+  - `updateLikesUI()`
+  - `updateCommentsUI()`
+  - `numberOfSections(in tableView: UITableView)`
+  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `tableView(... viewForHeaderInSection section: Int)`
+
 - **UserSocialProfileViewController** - contains functions that displays a specific user's profile information and timeline for activities, groups and comments.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
