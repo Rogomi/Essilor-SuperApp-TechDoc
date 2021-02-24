@@ -154,6 +154,15 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 - **CommentsViewController** - contains functions that displays list of comments and their specific replies.
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
+  - `didTapCommentCamera(_ sender: UIButton)`
+  - `didTapSendCommentButton(_ sender: Any)`
+  - `didTapCancelReplyingButton(_ sender: Any)`
+  - `loadComments()`
+  - `selectImage(sender: UIButton)`
+  - `toggleSendButton()`
+  - `retrieveReplies(for comment: CommentListObject, completion: @escaping(Error?) -> Void)`
+  - `saveCommentImage(_ image: UIImage?, with comment: String, completion: @escaping(Error?) -> Void)`
+  - `saveComment(_ comment: String, fileObjects: [[String: Any]]? = nil, completion: @escaping(Error?) -> Void)`
   - `numberOfSections(in tableView: UITableView)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
