@@ -72,6 +72,18 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 **SwiftAudio** - Used to play podcasts
 **SkeletonView** Used to display a loading view for incoming data
 
+### ANALYTICS
+Details for analytics event names and actions: https://docs.google.com/spreadsheets/d/1b39XXshTeR9Vf-GV5kpHwhlMN2Dtb0cQopGR8mq9ryU/edit#gid=0
+
+* **Event Name Format:**	<action><content_type>_<epic_name>_<screen_name>	
+* **Example:**	likecomment_podcast_commentsview	
+* **Parameters:**	userid, platform, action, contenttype	
+* **Optional Parameters:** 	targetdata, logdata	
+		
+**REMARKS:**	
+* _Target data_ pertains to the target of the action, while the _Log Data_ pertains to the content of the action	
+* _Target Data_ and _Log Data_ can be null, but _Target Data_ will most of time be filled with the targeted item.
+* _Log Data_ will often be used when adding posts and comments.
 ### ACTIVITIES AND CONTROLLERS
 
 #### Core Classes
