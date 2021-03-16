@@ -72,6 +72,18 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 **SwiftAudio** - Used to play podcasts
 **SkeletonView** Used to display a loading view for incoming data
 
+### ANALYTICS
+Details for analytics event names and actions: https://docs.google.com/spreadsheets/d/1b39XXshTeR9Vf-GV5kpHwhlMN2Dtb0cQopGR8mq9ryU/edit#gid=0
+
+* **Event Name Format:**	<action><content_type>_<epic_name>_<screen_name>	
+* **Example:**	likecomment_podcast_commentsview	
+* **Parameters:**	userid, platform, action, contenttype	
+* **Optional Parameters:** 	targetdata, logdata	
+		
+**REMARKS:**	
+* _Target data_ pertains to the target of the action, while the _Log Data_ pertains to the content of the action	
+* _Target Data_ and _Log Data_ can be null, but _Target Data_ will most of time be filled with the targeted item.
+* _Log Data_ will often be used when adding posts and comments.
 ### ACTIVITIES AND CONTROLLERS
 
 #### Core Classes
@@ -111,17 +123,21 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... viewForHeaderInSection section: Int)`
 
-- **TWHighlightsSeeAllViewController** - contains functions that loads all of the TW Highlights from the API and displays to the user.
+- **TWHighlightsSeeAllViewController** - contains functions that loads all of the contents from either the LumApps API or Azure API and displays to the user. Currently used when browing to all of TWHighlights or Financial News.
   ##### Methods
   - `loadTWH(pageCursor: String, willShowSkeleton: Bool)`
+  - `loadAzContents(pageCursor: String, willShowSkeleton: Bool)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
   - `tableView(... viewForHeaderInSection section: Int)`
 
-- **TWHighlightDetailsViewController** - contains functions that loads a TW Highlight content and loads a brief list of news from the API.
+- **ContentDetailsViewController** - contains functions that loads a content and loads a brief list of news from the API. It can use the contents coming from either the LumApps web server, or the Azure web server. This is currently used for TWHighlights and Financial News.
   ##### Methods
+  - `loadContent()`
+  - `loadAzContent()`
   - `loadNews()`
+  - `loadAzNews()`
   - `didTapBackButton(_ sender: Any)`
   - `didTapOverflowButton(_ sender: Any)`
   - `didTapLikesButton(_ sender: Any)`
@@ -134,6 +150,10 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
   - `tableView(... viewForHeaderInSection section: Int)`
+  - `likeLumappContent(_ content: ContentListObject)`
+  - `likeAzContent(_ content: AzContentObject)`
+  - `unlikeLumappContent(_ content: ContentListObject)`
+  - `unlikeAzContent(_ content: AzContentObject)`
 
 - **UserSocialProfileViewController** - contains functions that displays a specific user's profile information and timeline for activities, groups and comments.
   ##### Methods
@@ -144,14 +164,16 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
 
-- **LikesViewController** - contains functions that displays list of users that liked a social item (Posts, Comments, Podcast, etc.)
+- **LikesViewController** - contains functions that displays list of users that liked a social item (Posts, Comments, Podcast, Financial News)
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
+  - `loadLikes()`
+  - `checkFollowStatus(_ idx: Int = 0, for users: [UserDetailsObject])`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
 
-- **CommentsViewController** - contains functions that displays list of comments and their specific replies.
+- **CommentsViewController** - contains functions that displays list of comments and their specific replies. Currently used for TWHighlights, Podcasts and Financial News.
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
   - `didTapCommentCamera(_ sender: UIButton)`
@@ -163,6 +185,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `retrieveReplies(for comment: CommentListObject, completion: @escaping(Error?) -> Void)`
   - `saveCommentImage(_ image: UIImage?, with comment: String, completion: @escaping(Error?) -> Void)`
   - `saveComment(_ comment: String, fileObjects: [[String: Any]]? = nil, completion: @escaping(Error?) -> Void)`
+  - `postCommentOnAzure(_ comment: String, completion: @escaping(Error?) -> Void)`
   - `numberOfSections(in tableView: UITableView)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
@@ -204,6 +227,7 @@ Most of the third party libraries are installed using CocoaPods. They can be add
   - `didTapCloseButton(_ sender: Any)`
   - `didTapLikes(_ sender: Any)`
   - `didTapComments(_ sender: Any)`
+  - `didTapLikeButton(_ sender: Any)`
   - `togglePlay(_ sender: Any)`
   - `previous(_ sender: Any)`
   - `next(_ sender: Any)`
