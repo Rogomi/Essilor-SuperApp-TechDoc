@@ -254,5 +254,47 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
   
+- **CalendarViewController** - controls the display of the user calendar and events  
+  ##### Methods
+  - `getList(date: Date)`
+  - `setDateSelection(startDate: Date, endDate: Date)`
+  - `tableViewDidRefresh(_ sender: Any)`
+  - `openMonthPicker()`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `presentationController(... viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle)`
+  - `presentationController(... viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle)`
+  
+- **EventViewController** - controls the display of event webview
+  - `loadView()`
+  
+- **FinancialsViewController** - controls the display of the Financials view
+  - `refreshStockPrice()`
+  - `refreshFinancialNews()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  
+- **FinancialsSeeMoreViewController** - controls the display of the Financials view
+  - `didTapBackButton(_ sender: Any)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  
+- **MyCareerViewController** - controls the display of the My Career views
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`
+  - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
+  
+- **WelcomeViewController** - controls the display of the "Welcome to Transitions" view
+  - `viewWillAppear(_ animated: Bool)`
+  
+- **WikiViewController** - controls the display of the "Wiki-Essi" view
+  - `viewWillAppear(_ animated: Bool)`
+  
+- **TalentViewController** - controls the display of the "E-Talent" view
+  - `viewWillAppear(_ animated: Bool)`
+  
+- **UniversityViewController** - controls the display of the "University" view
+  - `viewWillAppear(_ animated: Bool)`
+
+  
 ### APPLICATION FLOW DIAGRAM
 
