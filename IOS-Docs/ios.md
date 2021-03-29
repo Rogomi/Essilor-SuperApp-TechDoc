@@ -203,6 +203,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **PodcastDashboardViewController** - controls the podcast dashboard
   ##### Methods
   - `getPodcastCategories(only: Bool)`
+  - `didTapSearchButton(_ sender: Any)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
@@ -213,13 +214,15 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 
 - **PodcastSearchViewController** - contains functions that allows the user to search through podcasts
   ##### Methods
-  - `getPodcasts()`
+  - `searchPodcasts()`
   - `getFilteredPodcast()`
-  - `didTapCancelButton(_ sender: Any)`
+  - `didTapEraseButton(_ sender: Any)`
+  - `didTapDoneCancelButton(_ sender: Any)`
   - `editingChanged(_ sender: UITextField)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `textFieldDidEndEditing(_ textField: UITextField)`
 
 - **PodcastPlayerViewController** - contains functions that allows the user to play podcasts
   ##### Methods
@@ -243,9 +246,6 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **PodcastCategoryViewController** - contains functions that allows the user to view podcasts in a category
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
-  - `getFilteredPodcast()`
-  - `didTapCancelButton(_ sender: Any)`
-  - `editingChanged(_ sender: UITextField)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
@@ -253,6 +253,8 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **PodcastDetailsViewController** - controls the display of podcast information details  
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
+  - `getDetails()`
+  - `updateDetails()`
   
 - **CalendarViewController** - controls the display of the user calendar and events  
   ##### Methods
