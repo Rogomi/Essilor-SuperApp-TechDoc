@@ -91,6 +91,34 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initCalendar()` - initializes the calendar's UI and data binding
   - `filterEvents(): ArrayList<EventHolder.Companion.Event>` -returns the filtered events from the Google Calendar API by the current selected date
   - `initAdapter()` - binds the filtered events to the UI
+
+- **SocialsFragment** - handles the calendar page
+  #### Methods
+  - `onEventsSuccess(eventHolder: EventHolder)` - called when the fetching of the events from the API is successful
+  - `initAdapter()` - binds the filtered events to the UI
+
+- **TWHFragment** - handles the calendar page
+  #### Methods
+  - `onEventsSuccess(eventHolder: EventHolder)` - called when the fetching of the events from the API is successful
+  - `initAdapter()` - binds the filtered events to the UI
+
+
+- **PostFeedFragment** - handles the calendar page
+  #### Methods
+  - `onEventsSuccess(eventHolder: EventHolder)` - called when the fetching of the events from the API is successful
+  - `initAdapter()` - binds the filtered events to the UI
+
+
+- **MyCareerFragment** - handles the calendar page
+  #### Methods
+  - `onEventsSuccess(eventHolder: EventHolder)` - called when the fetching of the events from the API is successful
+  - `initAdapter()` - binds the filtered events to the UI
+
+
+- **ProfileFragment** - handles the calendar page
+  #### Methods
+  - `onEventsSuccess(eventHolder: EventHolder)` - called when the fetching of the events from the API is successful
+  - `initAdapter()` - binds the filtered events to the UI
   
   
 ### TECHNICAL ARCHITECTURE
