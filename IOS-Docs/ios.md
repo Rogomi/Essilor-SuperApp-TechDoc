@@ -297,6 +297,18 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **UniversityViewController** - controls the display of the "University" view
   - `viewWillAppear(_ animated: Bool)`
 
+- **CreatePostViewController** - controls the display of podcast information details  
+  ##### Methods  
+  - `didTapAudienceButton(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapPostButton(_ sender: Any)`
+  - `didTapPictureButton(_ sender: Any)`
+  - `didTapLocationButton(_ sender: Any)`
+  - `didTapPollButton(_ sender: Any)`
+  - `savePostAz()`
+  - `collectionView(... numberOfItemsInSection section: Int)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`
   
 ### APPLICATION FLOW DIAGRAM
 
