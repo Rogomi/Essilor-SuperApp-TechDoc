@@ -67,10 +67,10 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 **ReachabilitySwift** - Used to check internet connection status   
 **SwiftDate** - Used to easily process Date objects in swift   
 **Fakery** - To easily create dummy data.   
-**GoogleSignIn** - Used to sign in to Google
-**GoogleAPIClientForREST/Calendar** -  To connect to Google Calendar
-**SwiftAudio** - Used to play podcasts
-**SkeletonView** - Used to display a loading view for incoming data
+**GoogleSignIn** - Used to sign in to Google  
+**GoogleAPIClientForREST/Calendar** -  To connect to Google Calendar. 
+**SwiftAudio** - Used to play podcasts  
+**SkeletonView** - Used to display a loading view for incoming data  
 **SwiftyCam** - Used for custom camera actions
 ### ANALYTICS
 Details for analytics event names and actions: https://docs.google.com/spreadsheets/d/1b39XXshTeR9Vf-GV5kpHwhlMN2Dtb0cQopGR8mq9ryU/edit#gid=0
