@@ -189,16 +189,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `numberOfSections(in tableView: UITableView)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
-  - `tableView(... didSelectRowAt indexPath: IndexPath)`
-
-- **CalendarViewController** - contains functions that handle the Calendar Screen, which allows the user to view their work calendar and see the event for the selected date  
-  ##### Methods
-  - `tableView(... cellForRowAt indexPath: IndexPath)`
-  - `tableView(... didSelectRowAt indexPath: IndexPath)`
-  - `configureCalendar(...)`
-  - `calendar(... cellForItemAt date: Date,...)`
-  - `getList(date: Date)`
-  - `getEventsByDate(date: Date)()`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
 
 - **PodcastDashboardViewController** - controls the podcast dashboard
   ##### Methods
@@ -256,7 +247,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `getDetails()`
   - `updateDetails()`
   
-- **CalendarViewController** - controls the display of the user calendar and events  
+- **CalendarViewController** - controls the display of the user calendar and events of the selected date
   ##### Methods
   - `getList(date: Date)`
   - `setDateSelection(startDate: Date, endDate: Date)`
@@ -386,7 +377,11 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **FollowingSubscriptionViewController** - controls the display of the "Following" view in the "Subscriptions" module which displays the People which the user are following. 
   - `viewDidLoad()`
   - `getFollowing()`
-  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
+
+- **AboutViewController** - controls the display of the "About us" view in the "Profile" tab which displays the details about the application.
+  - `viewDidLoad()`
+
   
 
 
