@@ -22,7 +22,7 @@ myTransitions iOS requires devices with at least iOS 12.0
 
 
 ### APPLICATION ID
-dev.transitions.iris.app
+com.transitions.transitionsworld
 
 
 ### DEBUGGING
@@ -308,7 +308,59 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `savePostAz()`
   - `collectionView(... numberOfItemsInSection section: Int)`
   - `collectionView(... cellForItemAt indexPath: IndexPath)`
-  - `collectionView(... didSelectItemAt indexPath: IndexPath)`
-  
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`  
+
+- **ProfileViewController** - controls the display of the "Profile" view
+  - `loadProfile()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+
+- **ProfileActivityViewController** - controls the display of the "Activity" view in the "Profile" tab
+  - `viewDidLoad()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `getData()`
+
+- **ProfileHistoryViewController** - controls the display of the "History" view in the "Profile" tab
+  - `viewDidLoad()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `getData()`  
+
+- **MySettingsViewController** - controls the display of the "My Settings" view in the "Profile" tab (UI only)  
+
+- **SettingsNotificationViewController** - controls the display of the "Notifivation Settings" view in the "Profile" tab (UI only)  
+
+- **AboutViewController** - controls the display of the "About" view in the "Profile" tab (UI only)
+  - `viewDidLoad()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `getData()`   
+
+- **SendFeedbackViewController** - controls the display of the "Send Feedback" view in the "Profile" tab
+  - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+
+- **FeedbackEmailViewController** - controls the display of the "Suggest Something" and "Report a bug" views in the "Profile" tab. This view is also responsible for sending the user's review to the [support email](transitionsmobile_support@transitions.com) via email. 
+  - `viewDidLoad()`
+  - `didTapDoneButton(_ sender: Any)`
+  - `didTapPhotosButton(_ sender: Any)`  
+  - `generateRawReply (reply: String)`
+  - `sendFeedback(email: GTLRGmail_Message)`
+
+- **RatingViewController** - controls the display of the "Rate us" view in the "Profile" tab. This view is also responsible for sending the user's rating to the server. 
+  - `viewDidLoad()`
+  - `ddidTapStarX(_ sender: Any)` - (Replace X with any number from 1 to 5)
+  - `didTapDone(_ sender: Any)`  
+  - `centerDescription (starNumber: Int)`
+  - `changeRating(starNumber: Int)`
+  - `decreaseStar(starNumber: Int)`
+  - `increaseStar(starNumber: Int)`   
+
+- **FeedbackSuccessViewController** - controls the display of the "Send Feedback Success" view in the "Profile" tab. 
+  - `viewDidLoad()`
+
+- **FeedbackSuccessViewController** - controls the display of the "Send Feedback Success" view in the "Profile" tab. 
+  - `viewDidLoad()`
+
+
 ### APPLICATION FLOW DIAGRAM
 
