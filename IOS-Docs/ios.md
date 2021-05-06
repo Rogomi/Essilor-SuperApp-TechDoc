@@ -280,7 +280,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `didTapBackButton(_ sender: Any)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   
-- **MyCareerViewController** - controls the display of the My Career views
+- **MyCareerViewController** - controls the display of the My Career views (Welcome to Teansitions, Wiki-Essi, E-Tslent, University)
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `collectionView(... didSelectItemAt indexPath: IndexPath)`
   - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
@@ -310,7 +310,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `collectionView(... cellForItemAt indexPath: IndexPath)`
   - `collectionView(... didSelectItemAt indexPath: IndexPath)`  
 
-- **ProfileViewController** - controls the display of the "Profile" view
+- **ProfileViewController** - controls the display of the "Profile" view which contains the buttons to link to the Profile views (Activity, History, Subscriptions, My Settings, Send Feedback, About the app, Logout)
   - `loadProfile()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
@@ -358,8 +358,36 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **FeedbackSuccessViewController** - controls the display of the "Send Feedback Success" view in the "Profile" tab. 
   - `viewDidLoad()`
 
-- **FeedbackSuccessViewController** - controls the display of the "Send Feedback Success" view in the "Profile" tab. 
+- **SubscriptionViewController** - controls the display of the "Subscriptions" view in the "Profile" tab which displays the Subscription views (All, Community, Events, Following). 
   - `viewDidLoad()`
+  - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`   
+
+- **AllSubscriptionsViewController** - controls the display of the "All" view in the "Subscriptions" module which displays 3 user subscriptions in each subscription category. 
+  - `viewDidLoad()`
+  - `getData()`
+  - `getCommunities()`
+  - `getEvents()`
+  - `getFollowing()`
+  - `tableView(_ tableView: UITableView, viewForHeaderInSection section: Int)`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
+
+- **CommunitySubscriptionsViewController** - controls the display of the "Communities" view in the "Subscriptions" module which displays the Communities which the user are subscribed to. 
+  - `viewDidLoad()`
+  - `getCommunities()`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
+
+- **EventsSubscriptionViewController** - controls the display of the "Events" view in the "Subscriptions" module which displays the Events which the user are subscribed to. (UI only) 
+  - `viewDidLoad()`
+  - `getEvents()`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
+
+- **FollowingSubscriptionViewController** - controls the display of the "Following" view in the "Subscriptions" module which displays the People which the user are following. 
+  - `viewDidLoad()`
+  - `getFollowing()`
+  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
+  
 
 
 ### APPLICATION FLOW DIAGRAM
