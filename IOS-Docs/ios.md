@@ -113,25 +113,143 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   ##### Methods
   - `collectionView(... numberOfItemsInSection section: Int)`
   - `collectionView(... cellForItemAt indexPath: IndexPath)`
-  - `collectionView(... didSelectItemAt indexPath: IndexPath)`
-
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`  
+  
+- **CreatePostViewController** - controls the display of podcast information details  
+  ##### Methods  
+  - `didTapAudienceButton(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapPostButton(_ sender: Any)`
+  - `didTapPictureButton(_ sender: Any)`
+  - `didTapLocationButton(_ sender: Any)`
+  - `didTapPollButton(_ sender: Any)`
+  - `savePostAz()`
+  - `collectionView(... numberOfItemsInSection section: Int)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`  
+  
+- **CreateCommunityPostViewController** 
+  ##### Methods  
+  - `viewDidLoad()`
+  - `didTapAudienceButton(_ sender: Any)`
+  - `didTapPostType(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapPostButton(_ sender: Any)`
+  - `didTapPictureButton(_ sender: Any)`
+  - `savePostImages(_ images: [UIImage?], with post: String, ...)`
+  - `savePost(_ post: String, fileObjects: [[String: Any]]?, ...)`
+  - `textViewDidChange(_ textView: UITextView)`
+  - `shouldDismissPhotoPicker(withTLPHAssets: [TLPHAsset])`
+  - `handleNoAlbumPermissions(picker: TLPhotosPickerViewController)`
+  - `handleNoCameraPermissions(picker: TLPhotosPickerViewController)`
+  - `askPermissions(message:String)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`  
+    
+- **CommunityPickerViewController** 
+  ##### Methods  
+  - `didTapFilterButton(_ sender: Any)`
+  - `getFollowedCommunities()`
+  - `getAllCommunities()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+  
+- **AddLocationViewController** 
+  ##### Methods  
+  - `didTapBackButton(_ sender: Any)`
+  - `getNearbyPlaces(with location: CLLocationCoordinate2D, keyword: String?)`
+  - `locationManager(... didUpdateLocations locations: [CLLocation])`
+  - `searchBarTextDidBeginEditing(_ searchBar: UISearchBar)`
+  - `searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)`
+  - `searchBarSearchButtonClicked(_ searchBar: UISearchBar)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+  
+- **CommunityViewController** 
+  ##### Methods  
+  - `tableViewRefresh(_ sender: Any)`
+  - `postDidSubmit(_ object: Any)`
+  - `didTapCreatePostButton(_ sender: Any)`
+  - `getFollowedCommunities()`
+  - `getAllCommunities()`
+  - `loadActivities(pageCursor: String?, ...)`
+  - `likeLumappContent(_ content: ContentListObject, cell: FeedTextPostTableViewCell)`
+  - `unlikeLumappContent(_ content: ContentListObject, ...)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+  
+- **CommunitiesDetailsViewController** 
+  ##### Methods  
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`  
+  
+- **SelectedCommunityViewController** 
+  ##### Methods  
+  - `viewDidLoad()`
+  - `tableViewRefresh(_ sender: Any)`
+  - `postDidSubmit(_ object: Any)`
+  - `didTapCreatePostButton(_ sender: Any)`
+  - `didTapDetailsButton(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `loadActivities(pageCursor: String? ...)`
+  - `likeLumappContent(_ content: ContentListObject, cell: FeedTextPostTableViewCell)`
+  - `unlikeLumappContent(_ content: ContentListObject, ...)`
+  - `tableView(... cellForItemAt indexPath: IndexPath)`  
+  
+- **SeeAllCommunitiesViewController** 
+  ##### Methods  
+  - `didTapNotReadyButton(_ sender: Any)`
+  - `viewDidLoad()`
+  - `getFollowedCommunities()`
+  - `getAllCommunities()`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`  
+  
+- **PeopleFinderViewController**  - controls the "People Finder" view from the "Network" tab of the app which is responsible for allowing the user to search people from the app by their name and/or group/s
+  ##### Methods  
+  - `searchEditingDidEnd(_ sender: Any)`
+  - `viewDidLoad()`
+  - `unwindFromGroupFilter(_ sender: UIStoryboardSegue)`
+  - `getData()`
+  - `checkFollowStatus(for user: UserDetailsObject, ...)`
+  - `tableView(... cellForItemAt indexPath: IndexPath)`  
+  
+- **SearchGroupViewController**  - controls the "Search Group Filter" view presented by the "People Finder" view to filter the people by groups. This view controller allows the user to search a group and select it and uses the selcted group to filter the results in the "People Finder" view.
+  ##### Methods  
+  - `editingDidEndGroupSearch(_ sender: Any)`
+  - `viewDidLoad()`
+  - `getData()`
+  - `tableView(... cellForItemAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`  
+  
 - **FeedViewController** - contains functions that loads the newsfeed for the user (contains 3 sections, the User Stories, TW Highlights and Activities)
   ##### Methods
   - `loadTWH()`
-  - `numberOfSections(in tableView: UITableView)`
-  - `tableView(... numberOfRowsInSection section: Int)`
+  - `tableViewRefresh(_ sender: Any)`
+  - `postDidSubmit(_ object: Any)`
+  - `storiesDidUpdate(_ object: Any)`
+  - `didTapCreatePostButton(_ sender: Any)`
+  - `addSwipe()`
+  - `handleSwipe(sender: UISwipeGestureRecognizer)`
+  - `openCamera(withAnimation: Bool = false)`
+  - `loadStories(willShowSkeleton: Bool)`
+  - `loadActivities(pageCursor: String?, currentPage: Int?, willShowSkeleton: Bool, isFromPostSubmit: Bool)`
+  - `likeAzContent(_ content: AzContentObject, cell: FeedTextPostTableViewCell)`
+  - `unlikeAzContent(_ content: AzContentObject, cell: FeedTextPostTableViewCell)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... viewForHeaderInSection section: Int)`
 
 - **TWHighlightsSeeAllViewController** - contains functions that loads all of the contents from either the LumApps API or Azure API and displays to the user. Currently used when browing to all of TWHighlights or Financial News.
   ##### Methods
+  - `func didTapBackButton(_ sender: Any)`
+  - `func tappedUnavailableButton(_ sender: Any)`
   - `loadTWH(pageCursor: String, willShowSkeleton: Bool)`
   - `loadAzContents(pageCursor: String, willShowSkeleton: Bool)`
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
   - `tableView(... viewForHeaderInSection section: Int)`
-
+  
 - **ContentDetailsViewController** - contains functions that loads a content and loads a brief list of news from the API. It can use the contents coming from either the LumApps web server, or the Azure web server. This is currently used for TWHighlights and Financial News.
   ##### Methods
   - `loadContent()`
@@ -153,8 +271,23 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `likeLumappContent(_ content: ContentListObject)`
   - `likeAzContent(_ content: AzContentObject)`
   - `unlikeLumappContent(_ content: ContentListObject)`
-  - `unlikeAzContent(_ content: AzContentObject)`
-
+  - `unlikeAzContent(_ content: AzContentObject)`  
+  
+- **TWHighlightActionsViewController**
+  ##### Methods
+  - `didTapScreen(_ sender: Any)`
+  - `dismissScreen()`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`
+  - `tableView(... didSelectRowAt indexPath: IndexPath)`
+  - `activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController)`
+  - `activityViewController(... itemForActivityType activityType: UIActivity.ActivityType?)`
+  - `activityViewController(... subjectForActivityType activityType: UIActivity.ActivityType?)`
+  
+- **TWWebViewController**
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCloseButton(_ sender: Any)`  
+  
 - **UserSocialProfileViewController** - contains functions that displays a specific user's profile information and timeline for activities, groups and comments.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
@@ -245,7 +378,13 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
   - `getDetails()`
-  - `updateDetails()`
+  - `updateDetails()`  
+  
+- **MyAppsViewController** - controls the display of the "My Apps" view
+  ##### Methods
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`
+  - `collectionView(... didSelectItemAt indexPath: IndexPath)`
+  - `didTapSearchButton(_ sender: Any)`  
   
 - **CalendarViewController** - controls the display of the user calendar and events of the selected date
   ##### Methods
@@ -259,19 +398,28 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `presentationController(... viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle)`
   
 - **EventViewController** - controls the display of event webview
+  ##### Methods
   - `loadView()`
   
+- **CalendarDatePickerViewController** - controls the display of the date picker for th calendar date selection
+  ##### Methods
+  - `setupDatePicker(current: Date, start: Date, end: Date)`
+  - `didTapConfirm(_ sender: Any)`
+  
 - **FinancialsViewController** - controls the display of the Financials view
+  ##### Methods
   - `refreshStockPrice()`
   - `refreshFinancialNews()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
   
 - **FinancialsSeeMoreViewController** - controls the display of the Financials view
+  ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   
 - **MyCareerViewController** - controls the display of the My Career views (Welcome to Teansitions, Wiki-Essi, E-Tslent, University)
+  ##### Methods
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `collectionView(... didSelectItemAt indexPath: IndexPath)`
   - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
@@ -287,31 +435,21 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   
 - **UniversityViewController** - controls the display of the "University" view
   - `viewWillAppear(_ animated: Bool)`
-
-- **CreatePostViewController** - controls the display of podcast information details  
-  ##### Methods  
-  - `didTapAudienceButton(_ sender: Any)`
-  - `didTapCloseButton(_ sender: Any)`
-  - `didTapPostButton(_ sender: Any)`
-  - `didTapPictureButton(_ sender: Any)`
-  - `didTapLocationButton(_ sender: Any)`
-  - `didTapPollButton(_ sender: Any)`
-  - `savePostAz()`
-  - `collectionView(... numberOfItemsInSection section: Int)`
-  - `collectionView(... cellForItemAt indexPath: IndexPath)`
-  - `collectionView(... didSelectItemAt indexPath: IndexPath)`  
-
+  
 - **ProfileViewController** - controls the display of the "Profile" view which contains the buttons to link to the Profile views (Activity, History, Subscriptions, My Settings, Send Feedback, About the app, Logout)
+  ##### Methods
   - `loadProfile()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
 
 - **ProfileActivityViewController** - controls the display of the "Activity" view in the "Profile" tab
+  ##### Methods
   - `viewDidLoad()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `getData()`
 
 - **ProfileHistoryViewController** - controls the display of the "History" view in the "Profile" tab
+  ##### Methods
   - `viewDidLoad()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `getData()`  
@@ -321,16 +459,19 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 - **SettingsNotificationViewController** - controls the display of the "Notifivation Settings" view in the "Profile" tab (UI only)  
 
 - **AboutViewController** - controls the display of the "About" view in the "Profile" tab (UI only)
+  ##### Methods
   - `viewDidLoad()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `getData()`   
 
 - **SendFeedbackViewController** - controls the display of the "Send Feedback" view in the "Profile" tab
+  ##### Methods
   - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
 
 - **FeedbackEmailViewController** - controls the display of the "Suggest Something" and "Report a bug" views in the "Profile" tab. This view is also responsible for sending the user's review to the [support email](transitionsmobile_support@transitions.com) via email. 
+  ##### Methods
   - `viewDidLoad()`
   - `didTapDoneButton(_ sender: Any)`
   - `didTapPhotosButton(_ sender: Any)`  
@@ -338,6 +479,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `sendFeedback(email: GTLRGmail_Message)`
 
 - **RatingViewController** - controls the display of the "Rate us" view in the "Profile" tab. This view is also responsible for sending the user's rating to the server. 
+  ##### Methods
   - `viewDidLoad()`
   - `ddidTapStarX(_ sender: Any)` - (Replace X with any number from 1 to 5)
   - `didTapDone(_ sender: Any)`  
@@ -347,15 +489,18 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `increaseStar(starNumber: Int)`   
 
 - **FeedbackSuccessViewController** - controls the display of the "Send Feedback Success" view in the "Profile" tab. 
+  ##### Methods
   - `viewDidLoad()`
 
 - **SubscriptionViewController** - controls the display of the "Subscriptions" view in the "Profile" tab which displays the Subscription views (All, Community, Events, Following). 
+  ##### Methods
   - `viewDidLoad()`
   - `prepare(for segue: UIStoryboardSegue, sender: Any?)`
   - `collectionView(... cellForItemAt indexPath: IndexPath)`
   - `collectionView(... didSelectItemAt indexPath: IndexPath)`   
 
 - **AllSubscriptionsViewController** - controls the display of the "All" view in the "Subscriptions" module which displays 3 user subscriptions in each subscription category. 
+  ##### Methods
   - `viewDidLoad()`
   - `getData()`
   - `getCommunities()`
@@ -365,21 +510,25 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
 
 - **CommunitySubscriptionsViewController** - controls the display of the "Communities" view in the "Subscriptions" module which displays the Communities which the user are subscribed to. 
+  ##### Methods
   - `viewDidLoad()`
   - `getCommunities()`
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
 
 - **EventsSubscriptionViewController** - controls the display of the "Events" view in the "Subscriptions" module which displays the Events which the user are subscribed to. (UI only) 
+  ##### Methods
   - `viewDidLoad()`
   - `getEvents()`
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
 
 - **FollowingSubscriptionViewController** - controls the display of the "Following" view in the "Subscriptions" module which displays the People which the user are following. 
+  ##### Methods
   - `viewDidLoad()`
   - `getFollowing()`
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
 
 - **AboutViewController** - controls the display of the "About us" view in the "Profile" tab which displays the details about the application.
+  ##### Methods
   - `viewDidLoad()`
 
   
