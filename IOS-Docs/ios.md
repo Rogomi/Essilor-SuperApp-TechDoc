@@ -222,6 +222,42 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `tableView(... cellForItemAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
   
+- **ActivityViewController** 
+  ##### Methods  
+  - `viewDidLoad()`  
+  
+- **ActivityPhotoViewController** 
+  ##### Methods  
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapOverflowButton(_ sender: Any)`
+  - `didTapAuthorButton(_ sender: Any)`
+  - `didTapSeeMoreButton(_ sender: Any)`
+  - `didTapLikeButton(_ sender: UIButton)`
+  - `didTapCommentButton(_ sender: UIButton)`
+  - `didTapShareButton(_ sender: UIButton)`
+  - `loadActivity()`
+  - `likeLumappContent()`
+  - `unlikeLumappContent()`
+  - `updateLikesUI()`
+  - `updateCommentsUI()`  
+  
+- **ActivityCommunityPhotoViewController** 
+  ##### Methods  
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapOverflowButton(_ sender: Any)`
+  - `didTapAuthorButton(_ sender: Any)`
+  - `didTapSeeMoreButton(_ sender: Any)`
+  - `didTapLikeButton(_ sender: UIButton)`
+  - `didTapCommentButton(_ sender: UIButton)`
+  - `didTapShareButton(_ sender: UIButton)`
+  - `loadActivity()`
+  - `likeLumappContent()`
+  - `unlikeLumappContent()`
+  - `updateLikesUI()`
+  - `updateCommentsUI()`  
+  
 - **FeedViewController** - contains functions that loads the newsfeed for the user (contains 3 sections, the User Stories, TW Highlights and Activities)
   ##### Methods
   - `loadTWH()`
@@ -305,7 +341,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`
-
+  
 - **CommentsViewController** - contains functions that displays list of comments and their specific replies. Currently used for TWHighlights, Podcasts and Financial News.
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
@@ -323,19 +359,96 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `tableView(... numberOfRowsInSection section: Int)`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
   - `tableView(... didSelectRowAt indexPath: IndexPath)`  
-
-- **PodcastDashboardViewController** - controls the podcast dashboard
+  
+- **StoryViewersViewController**
   ##### Methods
-  - `getPodcastCategories(only: Bool)`
-  - `didTapSearchButton(_ sender: Any)`
-  - `tableView(... numberOfRowsInSection section: Int)`
+  - `viewDidLoad()`
+  - `didTapCloseButton(_ sender: Any)`
+  - `tableView(... cellForRowAt indexPath: IndexPath)`  
+  
+- **PhotoViewController**
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapSaveButton(_ sender: Any)`
+  - `didTapShareButton(_ sender: Any)`
+  - `handleDidCompleteSavingToLibrary(image: UIImage?, error: Error?, contextInfo: Any?)`  
+  
+- **VideoViewController**
+  ##### Methods
+  - `viewDidLoad()`
+  - `playerItemDidReachEnd(_ notification: Notification)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapSaveButton(_ sender: Any)`
+  - `didTapShareButton(_ sender: Any)`
+  - `handleDidCompleteSavingToLibrary(image: UIImage?, error: Error?, contextInfo: Any?)`
+  - `convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category)`  
+  
+- **StoriesCameraViewController**
+  ##### Methods
+  - `viewDidLoad()`
+  - `swiftyCamSessionDidStartRunning(_ swiftyCam: SwiftyCamViewController)`
+  - `swiftyCamSessionDidStopRunning(_ swiftyCam: SwiftyCamViewController)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didBeginRecordingVideo camera: SwiftyCamViewController.CameraSelection)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishRecordingVideo camera: SwiftyCamViewController.CameraSelection)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint)`
+  - `swiftyCamDidFailToConfigure(_ swiftyCam: SwiftyCamViewController)`
+  - `didTapCancelButton(_ sender: Any)`
+  - `didTapGalleryButton(_ sender: Any)`
+  - `addSwipe()`
+  - `handleSwipe(sender: UISwipeGestureRecognizer)`
+  - `openPicker()`
+  - `openPhotos()`
+  - `openVideos()`
+  - `imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])`
+  - `hideButtons()`
+  - `showButtons()`
+  - `toggleFlashAnimation()`
+  - `startTimer()`
+  - `stopTimer()`
+  - `fireTimer()`  
+  
+- **StoriesCameraViewController**
+  ##### Methods
+  - `viewDidLoad()`
+  - `swiftyCamSessionDidStartRunning(_ swiftyCam: SwiftyCamViewController)`
+  - `swiftyCamSessionDidStopRunning(_ swiftyCam: SwiftyCamViewController)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didBeginRecordingVideo camera: SwiftyCamViewController.CameraSelection)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishRecordingVideo camera: SwiftyCamViewController.CameraSelection)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL)`
+  - `swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint)`
+  - `swiftyCamDidFailToConfigure(_ swiftyCam: SwiftyCamViewController)`
+  - `didTapCancelButton(_ sender: Any)`
+  - `didTapGalleryButton(_ sender: Any)`
+  - `addSwipe()`
+  - `handleSwipe(sender: UISwipeGestureRecognizer)`
+  - `openPicker()`
+  - `openPhotos()`
+  - `openVideos()`
+  - `imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])`
+  - `hideButtons()`
+  - `showButtons()`
+  - `toggleFlashAnimation()`
+  - `startTimer()`
+  - `stopTimer()`
+  - `fireTimer()`  
+  
+- **EventsDashboardViewController** 
+  ##### Methods
+  - `viewDidLoad()`
+  - `getEvents()`
   - `tableView(... cellForRowAt indexPath: IndexPath)`
-  - `tableView(... didSelectRowAt indexPath: IndexPath)`
-  - `tableView(... estimatedHeightForRowAt indexPath: IndexPath)`
-  - `numSections(in collectionSkeletonView: UITableView)`
-  - `collectionSkeletonView(... numberOfRowsInSection section: Int)`
-  - `collectionSkeletonView(... didSelectRowAt indexPath: IndexPath)`
-
+  - `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)`  
+  
+- **UpcomingEventsViewController**
+  ##### Methods
+  - `viewDidLoad()`
+  - `didTapBackButton(_ sender: Any)`
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`  
+  
 - **PodcastSearchViewController** - contains functions that allows the user to search through podcasts
   ##### Methods
   - `searchPodcasts()`
@@ -456,7 +569,7 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
 
 - **MySettingsViewController** - controls the display of the "My Settings" view in the "Profile" tab (UI only)  
 
-- **SettingsNotificationViewController** - controls the display of the "Notifivation Settings" view in the "Profile" tab (UI only)  
+- **SettingsNotificationViewController** - controls the display of the "Notification Settings" view in the "Profile" tab (UI only)  
 
 - **AboutViewController** - controls the display of the "About" view in the "Profile" tab (UI only)
   ##### Methods
@@ -520,17 +633,24 @@ Details for analytics event names and actions: https://docs.google.com/spreadshe
   - `viewDidLoad()`
   - `getEvents()`
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
-
+  
 - **FollowingSubscriptionViewController** - controls the display of the "Following" view in the "Subscriptions" module which displays the People which the user are following. 
   ##### Methods
   - `viewDidLoad()`
   - `getFollowing()`
   - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`  
-
+  
 - **AboutViewController** - controls the display of the "About us" view in the "Profile" tab which displays the details about the application.
   ##### Methods
-  - `viewDidLoad()`
-
+  - `viewDidLoad()`  
+  
+- **NotificationViewController** - controls the display of the "Notification" view.
+  ##### Methods
+  - `viewDidLoad()`  
+  - `loadNotifications()`  
+  - `attribute(fontName: String, string: String, size: CGFloat)`  
+  - `generateNewTWHCell(notification: FinalNotificationObject, cell: NewTWHTableCell)`  
+  - `collectionView(... cellForItemAt indexPath: IndexPath)`  
   
 
 
